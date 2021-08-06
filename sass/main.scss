@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+$crl-primary-light: #6f737f;
+$clr-primary: #3b4050;
+$clr-primary-dark: #2e323f;
+$clr-secondary-light: rgb(225, 224, 224);
+$clr-secondary: #a59678;
+$white: #ffffff;
+
+$breakpoints: (
+  small: 40em,
+  medium: 1000px,
+  large: 90em,
+);
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: "Oswald", sans-serif;
+  color: $clr-secondary;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 1.875rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 5.625rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 95vw;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1em;
+}
+
+@include mq(medium) {
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/*------------------------------------*\
+  #NAVIGATION
+\*------------------------------------*/
+
+header {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+.main-header {
+  background-color: #2e323f;
+}
+
+.logo-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    position: absolute;
+    left: 0;
+    border: transparent;
+    padding: 0;
+    background-color: #3b4050;
+    height: 2em;
+    width: 2em;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    transition: opacity 250ms ease;
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+}
+
+.main-nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  &__list {
+    text-align: center;
+    margin-top: 1.5em;
+
+    @include mq(medium) {
+      display: flex;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    padding: 0.5em 0;
+
+    @include mq(medium) {
+      margin: 0 0 0 3em;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+  }
+
+  @include mq(medium) {
+    height: auto;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.btn {
+  background-color: $clr-secondary;
+  border-radius: 1em;
+  font-family: "Oswald", sans-serif;
+  box-shadow: 0 0.125em 0.5em rgba(black, 0.15);
+  transform: scale(1);
+  padding: 0.2em 0.75em;
+  text-transform: uppercase;
+  color: white;
+}
+
+/*------------------------------------*\
+  #HERO
+\*------------------------------------*/
+.hero {
+  background-color: $clr-primary;
+  padding: 2em 0;
+  &__title {
+    span {
+      color: white;
+    }
+  }
+
+  &__text,
+  &__btn {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  &__btn {
+    margin-bottom: 1em;
+  }
+
+  &__container {
+    @include mq(medium) {
+      align-self: center;
+    }
+  }
+}
+
+/*------------------------------------*\
+  #PERKS
+\*------------------------------------*/
+
+.perks {
+  background-color: $clr-secondary-light;
+  text-align: center;
+  padding: 2em;
+
+  &__text {
+    font-size: 1.125rem;
+  }
+}
+
+/*------------------------------------*\
+  #MAIN-CONTENT
+\*------------------------------------*/
+.main-content {
+  padding: 100px 0;
+  &__title {
+    margin: 0;
+  }
+  &__text {
+    font-size: 1.125rem;
+  }
+
+  @include mq(medium) {
+    width: 60%;
+  }
+}
+
+/*------------------------------------*\
+  #SIDEBAR
+\*------------------------------------*/
+.sidebar {
+  padding: 100px 0;
+  text-align: center;
+
+  &__col--black {
+    padding: 1em;
+    color: white;
+    background-color: $clr-primary-dark;
+    margin-bottom: 2em;
+  }
+
+  @include mq(medium) {
+    width: 30%;
+  }
+}
+
+/*------------------------------------*\
+  #FOOTER
+\*------------------------------------*/
+
+.footer {
+  background-color: $clr-primary;
+  color: white;
+
+  &__message {
+    font-size: 1.75rem;
+    text-transform: capitalize;
+    font-family: "Oswald", sans-serif;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 1.3125rem;
+  }
+
+  &__list {
+    padding-bottom: 1em;
+  }
+
+  &__item {
+    padding-bottom: 1em;
+  }
+
+  &__link {
+    color: white;
+  }
+
+  @include mq(medium) {
+    .grid {
+      display: grid;
+      grid-auto-flow: dense;
+      grid-template-columns: 500px 1fr 1fr 1fr;
+      gap: 4em;
+    }
+  }
+}
