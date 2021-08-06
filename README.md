@@ -9,6 +9,13 @@ Primera versión del proyecto:
 * Falta algunas funcionalidades como transiciones y hovers.
 * Falta modularización.
 
+## V2
+Segunda versión del proyecto:
+*Se hizo la moduralización!.
+*Hovers activados en los botones
+
+
+
 <div align="center">
     <a href="https://davidalbear.github.io/Responsive-Layout/">
       Solution
