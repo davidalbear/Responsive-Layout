@@ -9,7 +9,12 @@ Primera versión del proyecto:
 * Falta algunas funcionalidades como transiciones y hovers.
 * Falta modularización.
 
-
+<div align="center">
+    <a href="https://davidalbear.github.io/Responsive-Layout/">
+      Solution
+    </a>
+  </h3>
+</div>
 
 ![responsive](https://user-images.githubusercontent.com/81319963/128448953-b097d9fb-e162-4e41-bba4-616785abe064.JPG)
 
