@@ -83,10 +83,10 @@ a {
 }
 
 .container {
-  width: 95vw;
+  width: 90vw;
   margin: 0 auto;
   max-width: 1200px;
-  padding: 1em;
+  padding: 1em 0;
 }
 
 @media (min-width: 1000px) {
@@ -242,7 +242,7 @@ header {
 .perks {
   background-color: #e1e0e0;
   text-align: center;
-  padding: 2em;
+  padding: 2em 0;
 }
 .perks__text {
   font-size: 1.125rem;
