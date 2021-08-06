@@ -11,8 +11,8 @@ Primera versión del proyecto:
 
 ## V2
 Segunda versión del proyecto:
-*Se hizo la moduralización!.
-*Hovers activados en los botones
+* Se hizo la moduralización!.
+* Hovers activados en los botones
 
 
 
