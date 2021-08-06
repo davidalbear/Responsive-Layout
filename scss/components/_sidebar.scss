@@ -1,0 +1,17 @@
+@use '../helpers/' as *;
+
+.sidebar {
+  padding: 100px 0;
+  text-align: center;
+
+  &__col--black {
+    padding: 1em;
+    color: $white;
+    background-color: $clr-primary-dark;
+    margin-bottom: 2em;
+  }
+
+  @include mq(medium) {
+    width: 30%;
+  }
+}

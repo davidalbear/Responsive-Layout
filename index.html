@@ -4,12 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Responsive Layout</title>
+    <meta name="description" content="Práctica de Landing Page  Resposive usando Sass">
+  
+    <link 
+    rel="canonical" 
+    href="https://davidalbear.github.io/Responsive-Layout/"
+    />
+    <link rel="icon" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+    <meta name="theme-color" content="#FF6600"> 
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css"/>
   </head>
   <body>
 
@@ -18,8 +27,9 @@
             <div class="logo-nav">
                 <button
                   class="logo-nav__btn"
-                  id="nav__toggle"
+                  id="btnNavOpen"
                   aria-label="open navigation"
+                  role="menubar"
                 >
                   <i class="fas fa-bars"></i>
                 </button>
@@ -28,15 +38,15 @@
                 </a>
               </div>        
 
-        <nav class="main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="#" class="main-nav__link">Home</a></li>
-                <li class="main-nav__item"><a href="#" class="main-nav__link">About</a></li>
-                <li class="main-nav__item"><a href="#" class="main-nav__link">Contact</a></li>
+        <nav class="main-nav" role="menu">
+            <ul class="main-nav__list" role="list">
+                <li class="main-nav__item" role="menuitem"><a href="#" class="main-nav__link">Home</a></li>
+                <li class="main-nav__item" role="menuitem"><a href="#" class="main-nav__link">About</a></li>
+                <li class="main-nav__item" role="menuitem"><a href="#" class="main-nav__link">Contact</a></li>
               </ul>
-              <ul class="main-nav__list">
-                <li class="main-nav__item"><a href="#" class="main-nav__link">Sign In</a></li>
-                <li class="main-nav__item"><a href="#" class="main-nav__link btn ">Sign up</a></li>
+              <ul class="main-nav__list" role="list">
+                <li class="main-nav__item" role="menuitem"><a href="#" class="main-nav__link">Sign In</a></li>
+                <li class="main-nav__item" role="menuitem"><a href="#" class="main-nav__link btn ">Sign up</a></li>
               </ul>
         </nav>
     </div>
@@ -48,7 +58,7 @@
 
       <section class="hero">
         <div class="container row">
-          <h1 class="hero__title">
+          <h1 class="hero__title" role="title">
             <span>Responsive layouts </span> don't have to be a struggle 
           </h1>
           <div class="hero__container">
@@ -56,7 +66,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua
             </p>
-            <a href="" class="btn hero__btn">I want to learn</a>
+            <a role="link" aria-label="En este enlace encontrar mas informacion sobre aprendizaje" href="#" class="btn hero__btn">I want to learn</a>
           </div>
         </div>
       </section>
@@ -104,8 +114,11 @@
                   adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                   dolore magna aliqua. Ut enim ad minim veniam.
                 </p>
-                <img src="img/the-image.jpg" alt="3 blocks aligned
-                " />
+                <img
+                src="img/the-image.jpg" 
+                alt="3 blocks aligned"
+                class="main-content__img"
+                />
                 <p class="main-content__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -148,7 +161,7 @@
       <footer class="footer">
         <div class="container">
           <p class="footer__message">just scratching the surface</p>
-          <div class=" grid">
+          <div class="grid">
             <div class="col-1">
               <h4 class="footer__title">About our company</h4>
               <p>
@@ -157,7 +170,7 @@
                 enim ad minim veniam.
               </p>
             </div>
-            <div class="col-1">
+            <div class="col-2">
               <h4 class="footer__title">Getting Around</h4>
               <ul class="footer__list">
                 <li class="footer__item"><a href="#" class="footer__link">Home</a></li>
@@ -165,7 +178,7 @@
                 <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
               </ul>
             </div>
-            <div class="col-2">
+            <div class="col-3">
               <h4 class="footer__title">Other Things</h4>
               <ul  class="footer__list">
                 <li class="footer__item"><a href="#" class="footer__link">Lorem Ipsum</a></li>
@@ -174,7 +187,7 @@
                 <li class="footer__item"><a href="#" class="footer__link">Consectetur</a></li>
               </ul>
             </div>
-            <div class="col-3">
+            <div class="col-4">
               <h4 class="footer__title">And More</h4>
               <ul  class="footer__list">
                 <li class="footer__item"><a href="#" class="footer__link">Lorem Ipsum</a></li>
@@ -187,6 +200,6 @@
         </div>
       </footer>
     
-      <script src="js/index.js" type="module"></script>
+      <script src="js/index.js"></script>
   </body>
 </html>

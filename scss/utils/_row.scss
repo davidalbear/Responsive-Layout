@@ -1,0 +1,8 @@
+@use '../helpers/' as *;
+
+@include mq(medium) {
+    .row {
+      display: flex;
+      justify-content: space-between;
+    }
+  }

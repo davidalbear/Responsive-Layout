@@ -1,0 +1,19 @@
+@use '../helpers/' as *;
+
+.main-content {
+  
+    &__title {
+      margin: 0;
+    }
+    &__text {
+      font-size: 1.125rem;
+    }
+    &__img{
+      margin:1em 0;
+    }
+  
+    @include mq(medium) {
+      padding: 100px 0;
+      width: 60%;
+    }
+}

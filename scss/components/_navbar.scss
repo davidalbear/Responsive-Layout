@@ -1,0 +1,81 @@
+@use '../helpers/' as *;
+
+.main-header {
+  background-color: $clr-primary-dark;
+}
+
+.logo-nav {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__btn {
+    position: absolute;
+    left: 0;
+    border: transparent;
+    padding: 0;
+    background-color: $clr-primary;
+    height: 2em;
+    width: 2em;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+
+
+
+    @include mq(medium) {
+      display: none;
+    }
+  }
+}
+
+.main-nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  &__list {
+    text-align: center;
+    margin-top: 1.5em;
+
+    @include mq(medium) {
+      display: flex;
+      margin: 0;
+    }
+  }
+
+  &__item {
+    padding: 0.5em 0;
+
+    @include mq(medium) {
+      margin: 0 0 0 3em;
+    }
+  }
+
+  &__link {
+    color: white;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      @include transition-ease;
+    }
+  }
+
+  @include mq(medium) {
+    height: auto;
+    visibility: visible;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  &.is-active {
+    visibility: visible;
+    height: auto;
+    position: relative;
+  }
+}

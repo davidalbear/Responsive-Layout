@@ -1,0 +1,24 @@
+@use './breakpoints' as *;
+
+@mixin mq($key) {
+  $size: map-get($breakpoints, $key);
+  @media (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+
+@mixin flexCenter {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,14 @@
+@use '../helpers/' as *;
+
+.perks {
+    background-color: $clr-secondary-light;
+    text-align: center;
+   
+  
+    &__text {
+      font-size: 1.125rem;
+    }
+}
+
+
+

@@ -1,0 +1,29 @@
+@use '../helpers/' as *;
+
+.hero {
+    background-color: $clr-primary;
+    min-height: 100vh;
+    @include flexCenter;
+    &__title {
+      span {
+        color: white;
+      }
+    }
+  
+    &__text,
+    &__btn {
+      color: white;
+      margin:2em 0;
+      font-size: 1.5rem;
+    }
+  
+    &__btn {
+      margin-bottom: 1em;
+    }
+  
+    &__container {
+      @include mq(medium) {
+        align-self: center;
+      }
+    }
+  }

@@ -1,0 +1,12 @@
+@use '../helpers' as *;
+
+.btn {
+    background-color: $clr-secondary;
+    border-radius: 1em;
+    font-family: "Oswald", sans-serif;
+    box-shadow: 0 0.125em 0.5em rgba(black, 0.15);
+    transform: scale(1);
+    padding: 0.2em 0.75em;
+    text-transform: uppercase;
+    @include transition-ease;
+}
